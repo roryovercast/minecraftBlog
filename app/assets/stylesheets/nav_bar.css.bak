@@ -1,0 +1,9 @@
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover,
+			.dropdown-menu > .active     >     a:focus {
+	background-image: linear-gradient(to bottom, #D2D2D2, #969696)
+ 			!important;
+	background-repeat: repeat-x !important;
+	color: #000000;
+	outline: 0 none;
+	text-decoration: none;
+}
