@@ -3,15 +3,13 @@
 <%- model_class = Post -%>
 <br></br>
 
-
 <table class="table table-hover">
 
 	<thead>
-		<tr>
 			<th><%= model_class.human_attribute_name(:title) %></th>
 			<th><%= model_class.human_attribute_name(:text) %></th>
-			<th><%= 'Time Created' %></th>
-			<th><%= 'Actions' %></th>
+			<th class="small_view"><%= 'Time Created' %></th></div>
+			<th class="tableRight"><%= 'Actions' %></th>
 	</thead>
 
 	<tbody>
@@ -19,8 +17,9 @@
 			<tr>
 				<td><%= post.title %></td>
 				<td><%= post.text %></td>
-				<td class="small_view"><%= post.created_at.strftime("%B %d, %Y at %H:%M") %></td>
-				<td>
+				<td class="small_view"><%= post.created_at.strftime("%B %d, %Y at %H:%M") %></td></div>
+				<td class="medium_view"><%= post.created_at.strftime("%B %d, %Y") %></td></div>
+				<td class="tableRight">
 					<%= link_to 'Show', post, :class => 'btn btn-small' %>
 					<%= link_to 'Edit', edit_post_path(post),
 		   			  :class => 'btn btn-small btn-warning' %>
@@ -33,4 +32,5 @@
 		<% end %>
 	</tbody>
 </table>
-<%= link_to 'New Post', new_post_path,  :class => 'btn' %>
+<div class="margin-left"><%= link_to 'New Post', new_post_path, :class => 'btn' %>
+</div>

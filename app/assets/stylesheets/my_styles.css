@@ -8,10 +8,15 @@ html{
 body {
 	min-height: 100%;
 	background: url('/images/background_small.jpg');
+	background-repeat: no-repeat;
 	background-position: center;
+	background-color: rgb(80,77,67);
 }
 
 .table {
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
 	background-color:rgba(255,255,255,0.90);
 }
 
@@ -19,9 +24,47 @@ body {
 	opacity: 1;
 }
 
-.btn{
+.btn-small{
+	width: 35px;
+	text-align: center;
 }
 
 .table tbody tr:hover td, .table tbody tr:hover th {
-	    background-color:rgba(210,210,210,1);
-		}
+  background-color:rgba(210,210,210,1);
+}
+
+.margin-left {
+	margin-left: 10%;
+}
+
+@media (max-width: 650px) {
+	td.small_view {
+		display: none;
+	}
+	th.small_view {
+		display: none;
+	}
+	td.medium_view {
+		display: none;
+	}
+}
+
+@media (max-width: 750px) and (min-width: 650px) {
+	td.small_view {
+		display: none;
+	}
+}
+
+@media (min-width: 750px) {
+	td.medium_view{
+		display: none;
+	}
+}
+
+td.tableRight {
+	text-align: right;
+}
+th.tableRight {
+	text-align: right;
+}
+
